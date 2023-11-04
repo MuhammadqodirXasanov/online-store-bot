@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Cart, Card } from './components';
+import Cart from './components/cart/cart';
+import Card from './components/card/card';
 import getData from './constants/db';
 
 const products = getData();
@@ -11,9 +12,9 @@ function App() {
 	// selected items
 	const [cartItems, setCartItems] = React.useState([]);
 
-	React.useEffect(()=>{
-		telegram.ready()
-	})
+	React.useEffect(() => {
+		telegram.ready();
+	});
 
 	// add item
 	const onAddItem = (item) => {
@@ -51,10 +52,10 @@ function App() {
 		}
 	};
 
-	const onCheckout = () =>{
-		telegram.MainButton.text = 'Buy :)'
-		telegram.MainButton.show()
-	}
+	const onCheckout = () => {
+		telegram.MainButton.text = 'Buy :)';
+		telegram.MainButton.show();
+	};
 
 	return (
 		<>
