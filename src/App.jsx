@@ -58,7 +58,19 @@ function App() {
 	};
 
 	const onSendData = React.useCallback(() => {
-		telegram.sendData(JSON.stringify(cartItems));
+		const queryID = telegram.initDataUnsave?.query_id;
+
+		if (queryID) {
+			fetch('link', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(cartItems),
+			});
+		} else {
+			telegram.sendData(JSON.stringify(cartItems));
+		}
 	}, [cartItems]);
 
 	React.useEffect(() => {
