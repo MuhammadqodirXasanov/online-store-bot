@@ -57,6 +57,16 @@ function App() {
 		existItem ? telegram.MainButton.show() : telegram.MainButton.hide();
 	};
 
+	const onSendData = React.useCallback(() => {
+		telegram.sendData(JSON.stringify(cartItems));
+	}, [cartItems]);
+
+	React.useEffect(() => {
+		telegram.onEvent('mainButtonClicked', onSendData);
+
+		return () => telegram.offEvent('mainButtonClicked', onSendData);
+	}, [onSendData]);
+
 	return (
 		<>
 			<h1 className='heading'>M. Xasanov's Products</h1>
