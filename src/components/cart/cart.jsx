@@ -15,9 +15,9 @@ const Cart = ({ cartItems, onCheckout }) => {
 			</h3>
 
 			<Button
-				title={cartItems.length === 0 ? 'Give Order' : 'Payment'}
+				title={cartItems.length ? 'Payment' : 'Give Order'}
 				type='checkout'
-				onClick={onCheckout}
+				onClick={() => onCheckout(cartItems.length)}
 			/>
 		</div>
 	);

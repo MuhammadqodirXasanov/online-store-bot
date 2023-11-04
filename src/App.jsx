@@ -52,9 +52,9 @@ function App() {
 		}
 	};
 
-	const onCheckout = () => {
+	const onCheckout = (existItem) => {
 		telegram.MainButton.text = 'Buy :)';
-		telegram.MainButton.show();
+		existItem ? telegram.MainButton.show() : telegram.MainButton.hide();
 	};
 
 	return (
