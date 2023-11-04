@@ -1,0 +1,11 @@
+.cards__container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+    padding-bottom: 30px;
+}
+.heading {
+	padding: 30px 0;
+	text-align: center;
+}

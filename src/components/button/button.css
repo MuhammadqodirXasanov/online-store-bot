@@ -1,0 +1,59 @@
+:root {
+	--add: rgb(80, 255, 74);
+	--add-hover: rgba(80, 255, 74, 0.789);
+	--add-active: rgba(9, 255, 0, 0.993);
+	--remove: rgb(255, 60, 60);
+	--remove-hover: rgba(255, 60, 60, 0.812);
+	--remove-active: rgb(255, 60, 60);
+	--checkout: rgb(0, 151, 55);
+	--checkout-hover: rgba(0, 151, 55, 0.738);
+	--checkout-active: rgba(0, 150, 55, 0.562);
+}
+
+.btn {
+	padding: 0.5rem 0.5rem;
+	font-size: 20px;
+	text-align: center;
+	border: 0;
+	outline: none;
+	border-radius: 10px;
+	width: 120px;
+	cursor: pointer;
+	transition: all 0.1s ease-in;
+	background: rgb(51, 75, 255);
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: 600;
+}
+.btn:hover {
+	box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.3);
+}
+.btn.add {
+	background: var(--add);
+}
+.btn.add:hover {
+	background: var(--add-hover);
+}
+.btn.add:active {
+	background: var(--add-active);
+}
+.btn.remove {
+	background: var(--remove);
+}
+.btn.remove:hover {
+	background: var(--remove-hover);
+}
+.btn.remove:active {
+	background: var(--remove-active);
+}
+.btn.checkout {
+	color: white;
+	background: var(--checkout);
+}
+.btn.checkout:hover {
+	background: var(--checkout-hover);
+}
+.btn.checkout:active {
+	background: var(--checkout-active);
+}
