@@ -61,15 +61,15 @@ function App() {
 		const queryID = telegram.initDataUnsave?.query_id;
 
 		if (queryID) {
-			fetch('https://m-xasanovs-store-61aa9e81b983.herokuapp.com/', {
+			fetch('https://m-xasanovs-store-61aa9e81b983.herokuapp.com/web-api', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify(cartItems),
+				body: JSON.stringify({ products: cartItems, queryID }),
 			});
 		} else {
-			telegram.sendData(JSON.stringify({ products: cartItems, queryID }));
+			telegram.sendData(JSON.stringify(cartItems));
 		}
 	}, [cartItems]);
 
