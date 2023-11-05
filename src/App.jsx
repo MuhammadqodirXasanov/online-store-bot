@@ -61,7 +61,7 @@ function App() {
 		const queryID = telegram.initDataUnsave?.query_id;
 
 		if (queryID) {
-			fetch('https://m-xasanovs-store-61aa9e81b983.herokuapp.com/web-api', {
+			fetch('https://m-xasanovs-store-61aa9e81b983.herokuapp.com/web-data', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
