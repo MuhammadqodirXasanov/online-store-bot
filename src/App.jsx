@@ -58,7 +58,7 @@ function App() {
 	};
 
 	const onSendData = React.useCallback(() => {
-		const queryID = telegram.initDataUnsave?.query_id;
+		const queryID = telegram.initDataUnsafe?.query_id;
 
 		if (queryID) {
 			fetch('https://m-xasanovs-store-61aa9e81b983.herokuapp.com/web-data', {
